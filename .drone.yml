@@ -16,7 +16,7 @@ pipeline:
       - latest
   rancher:
     image: peloton/drone-rancher
-    url: https://ranch.jhaaf.dk
+    url: ranch.jhaaf.dk
     access_key: ${RANCHER_ACCESS_KEY}
     secret_key: ${RANCHER_SECRET_KEY}
     service: gudni/gudni
