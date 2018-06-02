@@ -14,12 +14,12 @@ pipeline:
     secrets: [ docker_username, docker_password ]
     tags:
       - latest
+      - ${DRONE_COMMIT}
   rancher:
     image: peloton/drone-rancher
     url: https://ranch.jhaaf.dk
-    access_key: ${RANCHER_ACCESS_KEY}
-    secret_key: ${RANCHER_SECRET_KEY}
-    service: gudni
+    secrets: [ rancher_access_key, rancher_secret_key ]
+    service: gudni/gudni
     docker_image: jakobferdinandsen/gudni:latest
     confirm: true
     timeout: 240
