@@ -23,6 +23,7 @@ pipeline:
     docker_image: jakobferdinandsen/gudni:latest
     confirm: true
     timeout: 240
+    batch_size: 2
   slack:
     image: plugins/slack
     secrets: [ slack_webhook ]
